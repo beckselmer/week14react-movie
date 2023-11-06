@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'copperplate';
+  margin: 0;
+  padding: 0;
+  background-color: #DAFFFB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  color: #001C30;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 2px solid #001C30;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100svh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-box {
+  border: 3px solid #176b87;
+  background-color: #64ccc5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+  padding: 16px;
+}
+
+.movie-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-box h2 {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+
+.movie-box p {
+  font-size: 0.9rem;
+  color: #001C30;
+  margin-top: 8px;
+}
+
+.movie-box:hover {
+  transform: scale(1.05);
+}
+
+.stars {
+  font-size: 29px;
+}
+
+.star {
+  cursor: pointer;
+}
+
+.star.filled {
+  color: gold;
+}
+
+.star.empty {
+  color: #176b87;
 }
